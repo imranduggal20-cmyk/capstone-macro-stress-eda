@@ -1,0 +1,85 @@
+{
+  "author": "Imran Duggal",
+  "notebook": "notebooks/02_final_models.ipynb",
+  "n_rows": 5822,
+  "date_min": "2003-07-30",
+  "date_max": "2026-09-18",
+  "n_stress": 208,
+  "n_non_stress": 5614,
+  "primary_metric": "ROC-AUC",
+  "cv": "StratifiedKFold(n_splits=5)",
+  "split": "stratified 75/25 holdout + StratifiedKFold CV",
+  "chrono_test_stress_count": 0,
+  "best_model": "GradientBoosting",
+  "best_params": {
+    "clf__learning_rate": 0.1,
+    "clf__max_depth": 3,
+    "clf__n_estimators": 200
+  },
+  "best_cv_auc": 0.9994662765305341,
+  "best_cv_auc_std": 0.0005554058460693832,
+  "best_test_auc": 0.9983289502520272,
+  "best_stress_precision": 0.9787234042553191,
+  "best_stress_recall": 0.8846153846153846,
+  "best_stress_f1": 0.9292929292929293,
+  "all_models": {
+    "LogisticRegression": {
+      "cv_auc": 0.9512398475212628,
+      "cv_auc_std": 0.019039471470579515,
+      "test_auc": 0.9481152750383519,
+      "stress_precision": 0.29605263157894735,
+      "stress_recall": 0.8653846153846154,
+      "stress_f1": 0.4411764705882353,
+      "best_params": {
+        "clf__C": 10.0,
+        "clf__penalty": "l2",
+        "clf__solver": "lbfgs"
+      }
+    },
+    "RandomForest": {
+      "cv_auc": 0.9992074362117844,
+      "cv_auc_std": 0.0006051061543114734,
+      "test_auc": 0.998767258382643,
+      "stress_precision": 0.8135593220338984,
+      "stress_recall": 0.9230769230769231,
+      "stress_f1": 0.8648648648648649,
+      "best_params": {
+        "clf__max_depth": null,
+        "clf__min_samples_leaf": 5,
+        "clf__n_estimators": 100
+      }
+    },
+    "GradientBoosting": {
+      "cv_auc": 0.9994662765305341,
+      "cv_auc_std": 0.0005554058460693832,
+      "test_auc": 0.9983289502520272,
+      "stress_precision": 0.9787234042553191,
+      "stress_recall": 0.8846153846153846,
+      "stress_f1": 0.9292929292929293,
+      "best_params": {
+        "clf__learning_rate": 0.1,
+        "clf__max_depth": 3,
+        "clf__n_estimators": 200
+      }
+    }
+  },
+  "risk_deltas": {
+    "mean_ann_vol_stress": 0.27119852774635994,
+    "mean_ann_vol_non": 0.08723193233589864,
+    "mean_drawdown_stress": -0.1445528479497976,
+    "mean_drawdown_non": -0.03640142151334497,
+    "var_5pct_stress": -0.0336537244186039,
+    "var_5pct_non": -0.009378013630359299,
+    "es_5pct_stress": -0.042921810796055,
+    "es_5pct_non": -0.013628397899376251
+  },
+  "feature_cols": [
+    "FEDFUNDS_lag1",
+    "UNRATE_lag1",
+    "VIXCLS_lag1",
+    "fedfunds_diff_lag1",
+    "unrate_diff_lag1",
+    "vix_chg_lag1",
+    "port_vol_21_lag1"
+  ]
+}

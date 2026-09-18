@@ -1,0 +1,20 @@
+{
+  "n_rows": 5801,
+  "date_min": "2003-07-30",
+  "date_max": "2026-08-19",
+  "n_stress": 208,
+  "n_non_stress": 5593,
+  "stress_pct": 3.5855886916048956,
+  "metric": "ROC-AUC",
+  "auc": 0.8925468741408699,
+  "rmse_secondary": 0.03618236216737466,
+  "split_note": "stratified random 75/25 (chrono test stress count=0; both labeled windows fall in the early/mid sample)",
+  "mean_port_ret_stress": -0.0006167388769730501,
+  "mean_port_ret_non": 0.0004025183516336427,
+  "mean_vol_stress": 0.27119852774635994,
+  "mean_vol_non": 0.08723278648017824,
+  "mean_dd_stress": -0.14455284794979703,
+  "mean_dd_non": -0.0364907063591792,
+  "mean_vix_stress": 46.3673076923077,
+  "mean_vix_non": 17.93815662435187
+}
